@@ -32,6 +32,8 @@ enum Yells
     YELL_KILL_1                                 = 1,
     YELL_DEAD_1                                 = 2,
 
+    YELL_RESSURECT                              = 0,
+
     YELL_AGGRO_2                                = 0,
     YELL_KILL_2                                 = 1,
     YELL_DEAD_2                                 = 2
@@ -114,6 +116,7 @@ public:
         InstanceScript* instance;
 
         bool bIsUndead;
+        bool HasEventStarted;
 
         void Reset() OVERRIDE
         {
@@ -121,6 +124,7 @@ public:
                 me->UpdateEntry(NPC_INGVAR_HUMAN);
 
             bIsUndead = false;
+            HasEventStarted = false;
 
             me->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_IMMUNE_TO_PC);
             me->SetStandState(UNIT_STAND_STATE_STAND);
@@ -141,6 +145,7 @@ public:
         {
             if (damage >= me->GetHealth() && !bIsUndead)
             {
+                HasEventStarted = true;
                 //DoCast(me, SPELL_INGVAR_FEIGN_DEATH, true);  // Dont work ???
                 // visuel hack
                 me->SetHealth(0);
@@ -304,9 +309,6 @@ public:
 
         void Reset() OVERRIDE
         {
-            //! HACK: Creature's can't have MOVEMENTFLAG_FLYING
-            me->SetHover(true);
-
             me->GetPosition(x, y, z);
             DoTeleportTo(x+1, y, z+30);
 
@@ -314,8 +316,7 @@ public:
             if (ingvar)
             {
                 me->GetMotionMaster()->MovePoint(1, x, y, z+15);
-
-    //            Talk(YELL_RESSURECT);
+                Talk(YELL_RESSURECT);
             }
         }
 

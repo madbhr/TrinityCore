@@ -2903,6 +2903,7 @@ void SpellMgr::LoadSpellInfoCustomAttributes()
             case 73788: // Pain and Suffering
             case 73789: // Pain and Suffering
             case 73790: // Pain and Suffering
+            case 63293: // Mimiron - P3Wx2 Laser Barrage 
                 spellInfo->AttributesCu |= SPELL_ATTR0_CU_CONE_LINE;
                 break;
             case 24340: // Meteor
@@ -3438,6 +3439,20 @@ void SpellMgr::LoadSpellInfoCorrections()
             case 64596: // Cosmic Smash (Algalon the Observer)
                 spellInfo->RangeEntry = sSpellRangeStore.LookupEntry(6);  // 100yd
                 break;
+            case 63387: // Rapid Burst Left 10 man (Mimiron)
+            case 64019: // Rapid Burst Right 10 man (Mimiron)
+            case 64531: // Rapid Burst Left 25 man (Mimiron)
+            case 64532: // Rapid Burst Right 25 man (Mimiron)
+                spellInfo->Effects[EFFECT_0].RadiusEntry = sSpellRadiusStore.LookupEntry(EFFECT_RADIUS_50000_YARDS); // 50000yd
+                spellInfo->AttributesEx2 |= SPELL_ATTR2_CAN_TARGET_NOT_IN_LOS;
+                spellInfo->AttributesEx3 |= SPELL_ATTR3_UNK25;
+                break;
+            case 63382: // Rapid Burst Aura (Mimiron)
+                spellInfo->AttributesEx2 |= SPELL_ATTR2_CAN_TARGET_NOT_IN_LOS;
+                break;
+            case 64444: // Mimiron - Magnetic Core
+                spellInfo->RangeEntry = sSpellRangeStore.LookupEntry(6); // 100yd
+                break;
             case 64014: // Expedition Base Camp Teleport
             case 64024: // Conservatory Teleport
             case 64025: // Halls of Invention Teleport
@@ -3538,6 +3553,12 @@ void SpellMgr::LoadSpellInfoCorrections()
             case 72855: // Unbound Plague (Professor Putricide) (needs target selection script)
             case 72856: // Unbound Plague (Professor Putricide) (needs target selection script)
                 spellInfo->Effects[EFFECT_0].TargetB = SpellImplicitTargetInfo(TARGET_UNIT_TARGET_ENEMY);
+                break;
+            case 69783: // Ooze Flood (Rotface)
+            case 69797: // Ooze Flood (Rotface)
+            case 69799: // Ooze Flood (Rotface)
+            case 69802: // Ooze Flood (Rotface)
+                spellInfo->AttributesEx |= SPELL_ATTR1_CANT_TARGET_SELF;
                 break;
             case 71518: // Unholy Infusion Quest Credit (Professor Putricide)
             case 72934: // Blood Infusion Quest Credit (Blood-Queen Lana'thel)

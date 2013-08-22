@@ -2995,7 +2995,7 @@ bool bot_minion_ai::OnGossipSelect(Player* player, Creature* creature, uint32 se
                         foodspell->finish(false);
                         delete foodspell;
                         creature->MonsterWhisper("I can't do it right now", player->GetGUID());
-                        creature->SendPetCastFail(food, result);
+                        // creature->SendPetCastResult(result);
                     }
                     else
                     {

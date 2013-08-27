@@ -14618,8 +14618,6 @@ void Unit::UpdateReactives(uint32 p_time)
                     if (getClass() == CLASS_WARRIOR && GetTypeId() == TYPEID_PLAYER)
                         ToPlayer()->ClearComboPoints();
                     break;
-                default:
-                    break;
             }
         }
         else
@@ -15061,13 +15059,13 @@ bool Unit::IsTriggeredAtSpellProcEvent(Unit* victim, Aura* aura, SpellInfo const
     {
         if (!isVictim)
         {
-            uint32 WeaponSpeed = GetAttackTime(attType);
-            chance = GetPPMProcChance(WeaponSpeed, spellProcEvent->ppmRate, spellProto);
+            uint32 weaponSpeed = GetAttackTime(attType);
+            chance = GetPPMProcChance(weaponSpeed, spellProcEvent->ppmRate, spellProto);
         }
-        else
+        else if (victim)
         {
-            uint32 WeaponSpeed = victim->GetAttackTime(attType);
-            chance = victim->GetPPMProcChance(WeaponSpeed, spellProcEvent->ppmRate, spellProto);
+            uint32 weaponSpeed = victim->GetAttackTime(attType);
+            chance = victim->GetPPMProcChance(weaponSpeed, spellProcEvent->ppmRate, spellProto);
         }
     }
     // Apply chance modifer aura

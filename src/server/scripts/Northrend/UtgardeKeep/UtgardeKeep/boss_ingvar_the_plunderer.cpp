@@ -104,6 +104,7 @@ class boss_ingvar_the_plunderer : public CreatureScript
         boss_ingvar_the_plunderer() : CreatureScript("boss_ingvar_the_plunderer") { }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         bool bIsUndead;
         bool HasEventStarted;
 
@@ -111,6 +112,9 @@ class boss_ingvar_the_plunderer : public CreatureScript
 =======
         struct boss_ingvar_the_plundererAI : public BossAI
 >>>>>>> origin/master
+=======
+        struct boss_ingvar_the_plundererAI : public BossAI
+>>>>>>> master
         {
             boss_ingvar_the_plundererAI(Creature* creature) : BossAI(creature, DATA_INGVAR)
             {
@@ -118,14 +122,20 @@ class boss_ingvar_the_plunderer : public CreatureScript
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             bIsUndead = false;
             HasEventStarted = false;
 =======
+=======
+>>>>>>> master
             void Reset() OVERRIDE
             {
                 if (_isUndead)
                     me->UpdateEntry(NPC_INGVAR_HUMAN);
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> master
 
                 _isUndead = false;
 
@@ -135,6 +145,7 @@ class boss_ingvar_the_plunderer : public CreatureScript
                 _Reset();
                 events.SetPhase(PHASE_HUMAN);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             if (instance)
                 instance->SetData(DATA_INGVAR_EVENT, NOT_STARTED);
@@ -161,11 +172,16 @@ class boss_ingvar_the_plunderer : public CreatureScript
 
                 Talk(YELL_DEAD_1);
 =======
+=======
+>>>>>>> master
                 events.ScheduleEvent(EVENT_CLEAVE, urand(6, 12)*IN_MILLISECONDS, 0, PHASE_HUMAN);
                 events.ScheduleEvent(EVENT_STAGGERING_ROAR, urand(18, 21)*IN_MILLISECONDS, 0, PHASE_HUMAN);
                 events.ScheduleEvent(EVENT_ENRAGE, urand(7, 14)*IN_MILLISECONDS, 0, PHASE_HUMAN);
                 events.ScheduleEvent(EVENT_SMASH, urand(12, 17)*IN_MILLISECONDS, 0, PHASE_HUMAN);
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> master
             }
 
             void DamageTaken(Unit* /*doneBy*/, uint32& damage) OVERRIDE
@@ -325,6 +341,7 @@ class npc_annhylde_the_caller : public CreatureScript
                 _events.Reset();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         void Reset() OVERRIDE
         {
             me->GetPosition(x, y, z);
@@ -336,6 +353,8 @@ class npc_annhylde_the_caller : public CreatureScript
                 me->GetMotionMaster()->MovePoint(1, x, y, z+15);
                 Talk(YELL_RESSURECT);
 =======
+=======
+>>>>>>> master
                 //! HACK: Creature's can't have MOVEMENTFLAG_FLYING
                 me->SetHover(true);
 
@@ -346,9 +365,12 @@ class npc_annhylde_the_caller : public CreatureScript
                 {
                     me->GetMotionMaster()->MovePoint(1, x, y, z+15);
 
-        //            Talk(YELL_RESSURECT);
+                    Talk(YELL_RESSURECT);
                 }
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> master
             }
 
             void MovementInform(uint32 type, uint32 id) OVERRIDE

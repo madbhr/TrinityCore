@@ -1,15 +1,15 @@
+SET NAMES utf8;
+
 -- GENERAL --
-
-delete from `creature_template` where entry between 60001 and 60238;
-
-insert into `creature_template` 
+DELETE FROM `creature_template` where entry between 60001 and 60238;
+INSERT INTO `creature_template` 
 (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, 
 `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, 
 `rangeattacktime`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, 
 `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, 
 `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, 
 `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) 
-values 
+VALUES
 ('60001','0','0','0','0','0','5001','0','5001','0','Khelden','Mage','','0','80','80','2','12','12','1','1.2','1.3','1','0','1','1','0','0','1','3800','2000','8','0','0','0','0','0','0','8','1','0','0','0','7','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','','0','3','1','1','1','1','0','0','0','0','0','0','0','0','0','1','1048688','mage_bot','0'),
 ('60002','0','0','0','0','0','1294','0','1294','0','Zaldimar','Mage','','0','80','80','2','12','12','1','1.2','1.3','1','0','1','1','0','0','1','3800','2000','8','0','0','0','0','0','0','8','1','0','0','0','7','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','','0','3','1','1','1','1','0','0','0','0','0','0','0','0','0','1','1048688','mage_bot','0'),
 ('60003','0','0','0','0','0','1484','0','1484','0','Maginor','Mage','','0','80','80','2','12','12','1','1.2','1.3','1','0','1','1','0','0','1','3800','2000','8','0','0','0','0','0','0','8','1','0','0','0','7','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','','0','3','1','1','1','1','0','0','0','0','0','0','0','0','0','1','1048688','mage_bot','0'),
@@ -248,246 +248,244 @@ values
 ('60238','0','0','0','0','0','1105','0','0','0','Familier','(Chasseur)',NULL,'0','80','80','0','14','14','0','1.1','1.14286','1','0','87','117','0','214','1','2000','0','1','0','0','0','7','0','0','1','0','61','90','21','1','1','0','0','0','0','0','0','0','0','0','5708','0','0','0','0','0','0','0','0','0','0','0','','0','3','1','1','1','1','0','0','0','0','0','0','0','149','1','0','0','','0');
 
 -- EQUIPS --
-
-delete from `creature_equip_template` where entry between 60001 and 60238;
-
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60001','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60002','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60003','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60004','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60005','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60006','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60007','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60008','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60009','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60010','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60011','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60012','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60013','1','18002','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60014','1','27903','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60015','1','7723','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60016','1','13984','6448','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60017','1','13984','6448','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60018','1','6633','820','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60019','1','13984','6448','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60020','1','12584','18825','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60021','1','18876','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60022','1','12584','18825','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60023','1','18876','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60024','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60025','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60026','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60027','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60028','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60029','1','28367','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60030','1','12584','18825','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60031','1','13984','6448','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60032','1','27903','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60033','1','18002','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60034','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60035','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60036','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60037','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60038','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60039','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60041','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60042','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60043','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60044','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60045','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60046','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60047','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60048','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60049','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60050','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60051','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60052','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60053','1','18002','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60054','1','27903','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60055','1','28367','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60056','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60057','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60058','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60059','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60060','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60061','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60062','1','28367','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60063','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60064','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60065','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60066','1','18002','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60067','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60068','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60069','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60070','1','27903','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60071','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60072','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60073','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60074','1','18002','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60075','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60076','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60077','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60078','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60079','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60080','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60081','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60082','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60083','1','7723','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60084','1','18002','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60085','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60086','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60087','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60088','1','27903','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60089','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60090','1','28367','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60091','1','6633','820','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60092','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60093','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60094','1','18002','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60095','1','13984','6448','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60096','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60097','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60098','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60099','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60100','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60101','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60102','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60103','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60104','1','7723','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60105','1','18002','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60106','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60107','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60108','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60109','1','13984','6448','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60110','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60111','1','6633','820','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60112','1','13984','6448','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60113','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60114','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60115','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60116','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60117','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60118','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60119','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60120','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60121','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60122','1','27903','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60123','1','18002','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60124','1','7723','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60125','1','18002','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60126','1','28367','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60127','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60128','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60129','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60130','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60131','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60132','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60134','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60135','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60136','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60137','1','18876','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60138','1','12584','18825','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60139','1','18876','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60140','1','6633','820','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60141','1','13984','6448','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60142','1','6633','820','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60143','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60144','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60145','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60146','1','27903','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60147','1','18002','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60148','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60149','1','12584','18825','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60150','1','18876','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60151','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60152','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60153','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60154','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60155','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60156','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60157','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60158','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60159','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60160','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60161','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60162','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60163','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60164','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60165','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60166','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60167','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60168','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60169','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60170','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60171','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60172','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60173','1','28367','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60174','1','12584','18825','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60175','1','7723','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60176','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60177','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60178','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60179','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60180','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60181','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60182','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60183','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60184','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60185','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60186','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60187','1','13984','6448','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60188','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60189','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60191','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60192','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60193','1','13984','6448','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60194','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60195','1','12584','18826','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60196','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60197','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60198','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60199','1','18876','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60200','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60201','1','27903','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60202','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60203','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60204','1','31186','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60205','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60206','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60207','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60208','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60209','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60210','1','12584','18826','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60211','1','6633','820','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60212','1','13984','6448','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60213','1','25622','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60214','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60215','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60216','1','18876','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60217','1','28367','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60218','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60219','1','2291','0','2825');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60220','1','18002','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60221','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60222','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60223','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60224','1','27903','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60225','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60226','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60227','1','12584','18825','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60229','1','18876','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60230','1','31289','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60231','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60232','1','18842','0','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60233','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60234','1','18203','18202','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60235','1','29175','18826','0');
-insert into `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) values('60236','1','31289','0','0');
-
+DELETE FROM `creature_equip_template` where entry between 60001 and 60238;
+INSERT INTO `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`) VALUES
+('60001','1','18842','0','0'),
+('60002','1','18842','0','0'),
+('60003','1','18842','0','0'),
+('60004','1','31289','0','0'),
+('60005','1','31289','0','0'),
+('60006','1','31289','0','0'),
+('60007','1','31186','0','0'),
+('60008','1','31186','0','0'),
+('60009','1','31186','0','0'),
+('60010','1','2291','0','2825'),
+('60011','1','31289','0','0'),
+('60012','1','2291','0','2825'),
+('60013','1','18002','0','0'),
+('60014','1','27903','0','0'),
+('60015','1','7723','0','0'),
+('60016','1','13984','6448','0'),
+('60017','1','13984','6448','0'),
+('60018','1','6633','820','0'),
+('60019','1','13984','6448','0'),
+('60020','1','12584','18825','0'),
+('60021','1','18876','0','0'),
+('60022','1','12584','18825','0'),
+('60023','1','18876','0','0'),
+('60024','1','18842','0','0'),
+('60025','1','18203','18202','0'),
+('60026','1','31186','0','0'),
+('60027','1','31289','0','0'),
+('60028','1','18842','0','0'),
+('60029','1','28367','0','0'),
+('60030','1','12584','18825','0'),
+('60031','1','13984','6448','0'),
+('60032','1','27903','0','0'),
+('60033','1','18002','0','0'),
+('60034','1','31289','0','0'),
+('60035','1','18842','0','0'),
+('60036','1','31186','0','0'),
+('60037','1','31186','0','0'),
+('60038','1','18842','0','0'),
+('60039','1','31289','0','0'),
+('60041','1','18842','0','0'),
+('60042','1','18842','0','0'),
+('60043','1','18203','18202','0'),
+('60044','1','18203','18202','0'),
+('60045','1','18203','18202','0'),
+('60046','1','18203','18202','0'),
+('60047','1','25622','0','0'),
+('60048','1','25622','0','0'),
+('60049','1','25622','0','0'),
+('60050','1','2291','0','2825'),
+('60051','1','2291','0','2825'),
+('60052','1','2291','0','2825'),
+('60053','1','18002','0','0'),
+('60054','1','27903','0','0'),
+('60055','1','28367','0','0'),
+('60056','1','31289','0','0'),
+('60057','1','31289','0','0'),
+('60058','1','31289','0','0'),
+('60059','1','18842','0','0'),
+('60060','1','18842','0','0'),
+('60061','1','18842','0','0'),
+('60062','1','28367','0','0'),
+('60063','1','25622','0','0'),
+('60064','1','2291','0','2825'),
+('60065','1','18203','18202','0'),
+('60066','1','18002','0','0'),
+('60067','1','25622','0','0'),
+('60068','1','2291','0','2825'),
+('60069','1','18203','18202','0'),
+('60070','1','27903','0','0'),
+('60071','1','2291','0','2825'),
+('60072','1','31186','0','0'),
+('60073','1','18203','18202','0'),
+('60074','1','18002','0','0'),
+('60075','1','2291','0','2825'),
+('60076','1','31186','0','0'),
+('60077','1','18203','18202','0'),
+('60078','1','31186','0','0'),
+('60079','1','31186','0','0'),
+('60080','1','31186','0','0'),
+('60081','1','18203','18202','0'),
+('60082','1','2291','0','2825'),
+('60083','1','7723','0','0'),
+('60084','1','18002','0','0'),
+('60085','1','18203','18202','0'),
+('60086','1','2291','0','2825'),
+('60087','1','2291','0','2825'),
+('60088','1','27903','0','0'),
+('60089','1','2291','0','2825'),
+('60090','1','28367','0','0'),
+('60091','1','6633','820','0'),
+('60092','1','31289','0','0'),
+('60093','1','25622','0','0'),
+('60094','1','18002','0','0'),
+('60095','1','13984','6448','0'),
+('60096','1','31289','0','0'),
+('60097','1','25622','0','0'),
+('60098','1','2291','0','2825'),
+('60099','1','2291','0','2825'),
+('60100','1','2291','0','2825'),
+('60101','1','31289','0','0'),
+('60102','1','31289','0','0'),
+('60103','1','2291','0','2825'),
+('60104','1','7723','0','0'),
+('60105','1','18002','0','0'),
+('60106','1','31289','0','0'),
+('60107','1','31289','0','0'),
+('60108','1','31289','0','0'),
+('60109','1','13984','6448','0'),
+('60110','1','18842','0','0'),
+('60111','1','6633','820','0'),
+('60112','1','13984','6448','0'),
+('60113','1','25622','0','0'),
+('60114','1','25622','0','0'),
+('60115','1','2291','0','2825'),
+('60116','1','31186','0','0'),
+('60117','1','31186','0','0'),
+('60118','1','31186','0','0'),
+('60119','1','18842','0','0'),
+('60120','1','18842','0','0'),
+('60121','1','18842','0','0'),
+('60122','1','27903','0','0'),
+('60123','1','18002','0','0'),
+('60124','1','7723','0','0'),
+('60125','1','18002','0','0'),
+('60126','1','28367','0','0'),
+('60127','1','2291','0','2825'),
+('60128','1','2291','0','2825'),
+('60129','1','2291','0','2825'),
+('60130','1','31289','0','0'),
+('60131','1','31289','0','0'),
+('60132','1','31289','0','0'),
+('60134','1','18842','0','0'),
+('60135','1','18842','0','0'),
+('60136','1','18842','0','0'),
+('60137','1','18876','0','0'),
+('60138','1','12584','18825','0'),
+('60139','1','18876','0','0'),
+('60140','1','6633','820','0'),
+('60141','1','13984','6448','0'),
+('60142','1','6633','820','0'),
+('60143','1','31186','0','0'),
+('60144','1','31186','0','0'),
+('60145','1','31186','0','0'),
+('60146','1','27903','0','0'),
+('60147','1','18002','0','0'),
+('60148','1','31289','0','0'),
+('60149','1','12584','18825','0'),
+('60150','1','18876','0','0'),
+('60151','1','31186','0','0'),
+('60152','1','31186','0','0'),
+('60153','1','18842','0','0'),
+('60154','1','18842','0','0'),
+('60155','1','2291','0','2825'),
+('60156','1','25622','0','0'),
+('60157','1','25622','0','0'),
+('60158','1','2291','0','2825'),
+('60159','1','2291','0','2825'),
+('60160','1','2291','0','2825'),
+('60161','1','18842','0','0'),
+('60162','1','18842','0','0'),
+('60163','1','18842','0','0'),
+('60164','1','18842','0','0'),
+('60165','1','18842','0','0'),
+('60166','1','18842','0','0'),
+('60167','1','18842','0','0'),
+('60168','1','31289','0','0'),
+('60169','1','31289','0','0'),
+('60170','1','31289','0','0'),
+('60171','1','18842','0','0'),
+('60172','1','18842','0','0'),
+('60173','1','28367','0','0'),
+('60174','1','12584','18825','0'),
+('60175','1','7723','0','0'),
+('60176','1','25622','0','0'),
+('60177','1','2291','0','2825'),
+('60178','1','25622','0','0'),
+('60179','1','2291','0','2825'),
+('60180','1','2291','0','2825'),
+('60181','1','2291','0','2825'),
+('60182','1','2291','0','2825'),
+('60183','1','31289','0','0'),
+('60184','1','31289','0','0'),
+('60185','1','31289','0','0'),
+('60186','1','25622','0','0'),
+('60187','1','13984','6448','0'),
+('60188','1','18203','18202','0'),
+('60189','1','18842','0','0'),
+('60191','1','31186','0','0'),
+('60192','1','31289','0','0'),
+('60193','1','13984','6448','0'),
+('60194','1','2291','0','2825'),
+('60195','1','12584','18826','0'),
+('60196','1','31289','0','0'),
+('60197','1','2291','0','2825'),
+('60198','1','18842','0','0'),
+('60199','1','18876','0','0'),
+('60200','1','31289','0','0'),
+('60201','1','27903','0','0'),
+('60202','1','31186','0','0'),
+('60203','1','31186','0','0'),
+('60204','1','31186','0','0'),
+('60205','1','18842','0','0'),
+('60206','1','18842','0','0'),
+('60207','1','25622','0','0'),
+('60208','1','2291','0','2825'),
+('60209','1','2291','0','2825'),
+('60210','1','12584','18826','0'),
+('60211','1','6633','820','0'),
+('60212','1','13984','6448','0'),
+('60213','1','25622','0','0'),
+('60214','1','2291','0','2825'),
+('60215','1','31289','0','0'),
+('60216','1','18876','0','0'),
+('60217','1','28367','0','0'),
+('60218','1','18203','18202','0'),
+('60219','1','2291','0','2825'),
+('60220','1','18002','0','0'),
+('60221','1','18203','18202','0'),
+('60222','1','18203','18202','0'),
+('60223','1','18203','18202','0'),
+('60224','1','27903','0','0'),
+('60225','1','18842','0','0'),
+('60226','1','31289','0','0'),
+('60227','1','12584','18825','0'),
+('60229','1','18876','0','0'),
+('60230','1','31289','0','0'),
+('60231','1','18842','0','0'),
+('60232','1','18842','0','0'),
+('60233','1','18203','18202','0'),
+('60234','1','18203','18202','0'),
+('60235','1','29175','18826','0'),
+('60236','1','31289','0','0');
 
 
 -- Customize section
--- You can create your own values to be in line with your own server if these are not acceptable.
+-- You can create your own VALUES to be in line with your own server if these are not acceptable.
 
 -- Add flags_extra
 SET @EX_NO_BLOCK = 16;

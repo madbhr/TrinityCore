@@ -244,7 +244,7 @@ values
 ('60234','0','0','0','0','0','6820','0','6820','0','Gurrag','Chaman','','0','80','80','2','1638','1638','1','1.2','1.3','1','0','1','2','0','0','1','2600','2000','2','0','0','0','0','0','0','7','11','0','0','0','7','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','','0','3','1','1','1','1','0','0','0','0','0','0','0','0','0','1','1048688','shaman_bot','0'),
 ('60235','0','0','0','0','0','19596','0','19596','0','Auberose','Paladin','','0','80','80','2','1602','1602','1','1.2','1.3','1','0','2','4','0','0','1','2300','2000','2','0','0','0','0','0','0','2','10','0','0','0','7','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','','0','3','1','1','1','1','0','0','0','0','0','0','0','0','0','1','1048688','paladin_bot','0'),
 ('60236','0','0','0','0','0','10335','10335','10335','10335','Afina','Prêtre','','0','80','80','2','35','35','1','1.2','1.3','1','0','1','1','0','0','1','3600','2000','8','0','0','0','0','0','0','5','2','0','0','0','7','1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','','0','3','1','1','1','1','0','0','0','0','0','0','0','0','1','1','1048688','priest_bot','0'),
-('60237','0','0','0','0','0','1132','0','1132','0','Marcheur du Vide','Familier',NULL,'0','80','80','2','14','14','0','1.2','1.3','1','0','2','3','0','0','1','2000','2000','1','0','0','0','16','0','0','1','0','0','0','0','3','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','','0','3','1','1','1','1','0','0','0','0','0','0','0','0','1','1','1048688','Marcheur du Vide_bot','0'),
+('60237','0','0','0','0','0','1132','0','1132','0','Marcheur du Vide','Familier',NULL,'0','80','80','2','14','14','0','1.2','1.3','1','0','2','3','0','0','1','2000','2000','1','0','0','0','16','0','0','1','0','0','0','0','3','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','','0','3','1','1','1','1','0','0','0','0','0','0','0','0','1','1','1048688','voidwalker_bot','0'),
 ('60238','0','0','0','0','0','1105','0','0','0','Familier','(Chasseur)',NULL,'0','80','80','0','14','14','0','1.1','1.14286','1','0','87','117','0','214','1','2000','0','1','0','0','0','7','0','0','1','0','61','90','21','1','1','0','0','0','0','0','0','0','0','0','5708','0','0','0','0','0','0','0','0','0','0','0','','0','3','1','1','1','1','0','0','0','0','0','0','0','149','1','0','0','','0');
 
 -- EQUIPS --
@@ -506,3 +506,19 @@ UPDATE `creature_template` SET exp:=2, dmg_multiplier:=1.0, attackpower:=0, mind
 UPDATE `creature_template` SET exp:=2, dmg_multiplier:=1.0, attackpower:=0, mindmg:=1, maxdmg:=1, minlevel:=80, maxlevel:=80, baseattacktime:=3500, rangeattacktime:=2000, minrangedmg:=0, maxrangedmg:=0, rangedattackpower:=0, dynamicflags:=0, speed_walk:=1.2, speed_run:=1.3, InhabitType:=3, health_mod:=1, mana_mod:=1, armor_mod:=1, mechanic_immune_mask:=1, flags_extra:=@FLAGS_EX, AIName='' where entry >= 60000 && entry < 60239 and subname='Démoniste';
 UPDATE `creature_template` SET exp:=2, dmg_multiplier:=1.0, attackpower:=0, mindmg:=3, maxdmg:=5, minlevel:=80, maxlevel:=80, baseattacktime:=3400, rangeattacktime:=2000, minrangedmg:=0, maxrangedmg:=0, rangedattackpower:=0, dynamicflags:=0, speed_walk:=1.2, speed_run:=1.3, InhabitType:=3, health_mod:=1, mana_mod:=1, armor_mod:=1, mechanic_immune_mask:=1, flags_extra:=@FLAGS_EX, AIName='' where entry >= 60000 && entry < 60239 and subname='Guérrier';
 UPDATE `creature_template` SET exp:=2, dmg_multiplier:=1.0, attackpower:=0, mindmg:= 2, maxdmg:= 3, minlevel:=80, maxlevel:=80, baseattacktime:=2000, rangeattacktime:=2000, minrangedmg:=0, maxrangedmg:=0, rangedattackpower:=0, dynamicflags:=0, speed_walk:=1.2, speed_run:=1.3, InhabitType:=3, health_mod:=1, mana_mod:=1, armor_mod:=1, mechanic_immune_mask:=1, flags_extra:=@FLAGS_EX, AIName='' where entry between 60001 and 60239 and name='Marcheur du Vide';
+
+/* botcommands.cpp */
+SET @id = 989;
+
+-- Update command table with new RBAC permissions
+UPDATE `command` SET `permission` = @id+0 WHERE `name` = 'npcbot';
+UPDATE `command` SET `permission` = @id+1 WHERE `name` = 'npcbot info';
+UPDATE `command` SET `permission` = @id+2 WHERE `name` = 'npcbot add';
+UPDATE `command` SET `permission` = @id+3 WHERE `name` = 'npcbot revive';
+UPDATE `command` SET `permission` = @id+4 WHERE `name` = 'npcbot remove';
+UPDATE `command` SET `permission` = @id+5 WHERE `name` = 'npcbot reset';
+UPDATE `command` SET `permission` = @id+6 WHERE `name` = 'npcbot command';
+UPDATE `command` SET `permission` = @id+7 WHERE `name` = 'npcbot distance';
+UPDATE `command` SET `permission` = @id+8 WHERE `name` = 'npcbot helper';
+UPDATE `command` SET `permission` = @id+9 WHERE `name` = 'maintank';
+UPDATE `command` SET `permission` = @id+10 WHERE `name` = 'mt';

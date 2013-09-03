@@ -371,6 +371,19 @@ enum RBACPermissions
     RBAC_PERM_COMMAND_NOTIFY                                 = 470,
     RBAC_PERM_COMMAND_WHISPERS                               = 471,
 
+    //NPCBots commands
+    RBAC_PERM_COMMAND_NPCB                                   = 989,
+    RBAC_PERM_COMMAND_NPCB_INFO                              = 990,
+    RBAC_PERM_COMMAND_NPCB_ADD                               = 991,
+    RBAC_PERM_COMMAND_NPCB_REVIVE                            = 992,
+    RBAC_PERM_COMMAND_NPCB_REMOVE                            = 993,
+    RBAC_PERM_COMMAND_NPCB_RESET                             = 994,
+    RBAC_PERM_COMMAND_NPCB_COMMAND                           = 995,
+    RBAC_PERM_COMMAND_NPCB_DISTANCE                          = 996,
+    RBAC_PERM_COMMAND_NPCB_HELPER                            = 997,
+    RBAC_PERM_COMMAND_MAINTANK                               = 998,
+    RBAC_PERM_COMMAND_MT                                     = 999,
+
     // custom permissions 1000+
     RBAC_PERM_MAX
 };

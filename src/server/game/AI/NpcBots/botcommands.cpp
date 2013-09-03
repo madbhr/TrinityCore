@@ -24,35 +24,26 @@ public:
     {
         static ChatCommand npcbotCommandTable[] =
         {
-            { "info",           SEC_PLAYER,         false, &HandleNpcBotInfoCommand,                    "", NULL },
-            { "add",            SEC_PLAYER,         false, &HandleNpcBotAddCommand,                     "", NULL },
-            { "revive",         SEC_MODERATOR,      false, &HandleNpcBotReviveCommand,                  "", NULL },
-            { "remove",         SEC_PLAYER,         false, &HandleNpcBotRemoveCommand,                  "", NULL },
-            { "reset",          SEC_PLAYER,         false, &HandleNpcBotResetCommand,                   "", NULL },
-            { "command",        SEC_PLAYER,         false, &HandleNpcBotCommandCommand,                 "", NULL },
-            { "distance",       SEC_PLAYER,         false, &HandleNpcBotDistanceCommand,                "", NULL },
-            { "helper",         SEC_PLAYER,         false, &HandleBotHelperCommand,                     "", NULL },
-            //{ "reloadequips",   SEC_ADMINISTRATOR,  false, &HandleReloadEquipsCommand,                  "", NULL },
-            { NULL,             0,                  false, NULL,                                        "", NULL }
+            { "info",     RBAC_PERM_COMMAND_NPCB_INFO,     false, &HandleNpcBotInfoCommand,     "", NULL },
+            { "add",      RBAC_PERM_COMMAND_NPCB_ADD,      false, &HandleNpcBotAddCommand,      "", NULL },
+            { "revive",   RBAC_PERM_COMMAND_NPCB_REVIVE,   false, &HandleNpcBotReviveCommand,   "", NULL },
+            { "remove",   RBAC_PERM_COMMAND_NPCB_REMOVE,   false, &HandleNpcBotRemoveCommand,   "", NULL },
+            { "reset",    RBAC_PERM_COMMAND_NPCB_RESET,    false, &HandleNpcBotResetCommand,    "", NULL },
+            { "command",  RBAC_PERM_COMMAND_NPCB_COMMAND,  false, &HandleNpcBotCommandCommand,  "", NULL },
+            { "distance", RBAC_PERM_COMMAND_NPCB_DISTANCE, false, &HandleNpcBotDistanceCommand, "", NULL },
+            { "helper",   RBAC_PERM_COMMAND_NPCB_HELPER,   false, &HandleBotHelperCommand,      "", NULL },
+            { NULL,       0,                               false, NULL,                         "", NULL }
         };
 
         static ChatCommand commandTable[] =
         {
-            { "maintank",       SEC_PLAYER,         false, &HandleMainTankCommand,                      "", NULL },
-            { "mt",             SEC_PLAYER,         false, &HandleMainTankCommand,                      "", NULL },
-            { "npcbot",         SEC_PLAYER,         false, NULL,                          "", npcbotCommandTable },
-            { NULL,             0,                  false, NULL,                                        "", NULL }
+            { "maintank", RBAC_PERM_COMMAND_MAINTANK, false, &HandleMainTankCommand, "", NULL },
+            { "mt",       RBAC_PERM_COMMAND_MT,       false, &HandleMainTankCommand, "", NULL },
+            { "npcbot",   RBAC_PERM_COMMAND_NPCB,     false, NULL,                   "", npcbotCommandTable },
+            { NULL,       0,                          false, NULL,                   "", NULL }
         };
         return commandTable;
     }
-
-    //static bool HandleReloadEquipsCommand(ChatHandler* handler, const char* /*args*/)
-    //{
-    //    sLog->outInfo(LOG_FILTER_GENERAL, "Re-Loading Creature Equips...");
-    //    sObjectMgr->LoadEquipmentTemplates();
-    //    handler->SendGlobalGMSysMessage("DB table `creature_equip_template` (creature equipment) reloaded.");
-    //    return true;
-    //}
 
     static bool HandleBotHelperCommand(ChatHandler* handler, const char* /*args*/)
     {
